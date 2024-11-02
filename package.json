@@ -2,7 +2,7 @@
   "name": "yol-hizmetleri",
   "version": "0.0.1",
   "description": "A Quasar Project",
-  "productName": "Quasar App",
+  "productName": "Yol Hizmetleri",
   "author": "ugur.cerci <ugur.cerci@yahoo.com>",
   "private": true,
   "scripts": {
@@ -14,6 +14,7 @@
     "@quasar/extras": "^1.0.0",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "leaflet": "^1.9.4",
     "quasar": "^2.12.5",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0"

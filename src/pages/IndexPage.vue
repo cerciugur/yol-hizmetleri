@@ -6,12 +6,7 @@
     >-->
     <font-awesome-icon icon="fa-solid fa-truck-pickup" />
     <q-btn-group push>
-      <q-btn
-        push
-        label="Çekici"
-        icon="fa-solid fa-truck-pickup"
-        @click="redirectTowTruck()"
-      />
+      <q-btn push label="Çekici" icon="fa-solid fa-truck-pickup" />
       <q-btn push label="Akü" icon="battery_charging_full" />
       <q-btn push label="Lastikçi" icon="tire_repair" />
     </q-btn-group>
@@ -29,6 +24,7 @@ export default defineComponent({
 
 onMounted(() => {
   //locationYou()
+  redirectTowTruck();
 });
 
 function redirectTowTruck() {

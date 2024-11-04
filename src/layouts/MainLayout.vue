@@ -11,9 +11,7 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title>
-          Yol Hizmetleri
-        </q-toolbar-title>
+        <q-toolbar-title> Yol Hizmetleri </q-toolbar-title>
 
         <!--<div>Quasar v{{ $q.version }}</div>-->
         <q-btn-group push>
@@ -23,18 +21,9 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer
-      v-model="leftDrawerOpen"
-      bordered
-      class="bg-grey-1"
-    >
+    <q-drawer v-model="leftDrawerOpen" bordered class="bg-grey-1">
       <q-list>
-        <q-item-label
-          header
-          class="text-grey-8"
-        >
-          Menü
-        </q-item-label>
+        <q-item-label header class="text-grey-8"> Menü </q-item-label>
 
         <EssentialLink
           v-for="link in essentialLinks"
@@ -51,21 +40,21 @@
 </template>
 
 <script>
-import EssentialLink from 'components/EssentialLink.vue'
+import EssentialLink from "components/EssentialLink.vue";
 
 const linksList = [
   {
-    title: 'Anasayfa',
-    caption: '',
-    icon: 'home',
-    link: 'https://quasar.dev'
+    title: "Anasayfa",
+    caption: "",
+    icon: "home",
+    link: "http://localhost:8080/",
   },
   {
-    title: 'Site Hakkında',
-    caption: '',
-    icon: 'help_outline',
-    link: 'https://github.com/quasarframework'
-  }/*,
+    title: "Site Hakkında",
+    caption: "",
+    icon: "help_outline",
+    link: "http://localhost:8080/#/about",
+  } /*,
   {
     title: 'Discord Chat Channel',
     caption: 'chat.quasar.dev',
@@ -95,28 +84,28 @@ const linksList = [
     caption: 'Community Quasar projects',
     icon: 'favorite',
     link: 'https://awesome.quasar.dev'
-  }*/
+  }*/,
 ];
 
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref } from "vue";
 
 export default defineComponent({
-  name: 'MainLayout',
+  name: "MainLayout",
 
   components: {
-    EssentialLink
+    EssentialLink,
   },
 
-  setup () {
-    const leftDrawerOpen = ref(false)
+  setup() {
+    const leftDrawerOpen = ref(false);
 
     return {
       essentialLinks: linksList,
       leftDrawerOpen,
-      toggleLeftDrawer () {
-        leftDrawerOpen.value = !leftDrawerOpen.value
-      }
-    }
-  }
-})
+      toggleLeftDrawer() {
+        leftDrawerOpen.value = !leftDrawerOpen.value;
+      },
+    };
+  },
+});
 </script>

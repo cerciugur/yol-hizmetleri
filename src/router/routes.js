@@ -9,7 +9,15 @@ const routes = [
       },
       {
         path: "towtruck",
-        component: () => import("pages/TowTruck.vue"),
+        component: () => import("src/pages/TowTruckPage.vue"),
+      },
+      {
+        path: "battery",
+        component: () => import("src/pages/BatteryPage.vue"),
+      },
+      {
+        path: "tire",
+        component: () => import("src/pages/TirePage.vue"),
       },
       {
         path: "about",

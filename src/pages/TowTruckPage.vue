@@ -1,4 +1,5 @@
 <template>
+  çekici sayfa
   <LeafletMap></LeafletMap>
 </template>
 

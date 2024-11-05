@@ -8,19 +8,19 @@ const routes = [
         component: () => import("pages/IndexPage.vue"),
       },
       {
-        path: "towtruck",
+        path: "/towtruck",
         component: () => import("src/pages/TowTruckPage.vue"),
       },
       {
-        path: "battery",
+        path: "/battery",
         component: () => import("src/pages/BatteryPage.vue"),
       },
       {
-        path: "tire",
+        path: "/tire",
         component: () => import("src/pages/TirePage.vue"),
       },
       {
-        path: "about",
+        path: "/about",
         component: () => import("pages/AboutPage.vue"),
       },
     ],

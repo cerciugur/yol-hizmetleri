@@ -1,4 +1,5 @@
 <template>
+  akü sayfa
   <LeafletMap></LeafletMap>
 </template>
 

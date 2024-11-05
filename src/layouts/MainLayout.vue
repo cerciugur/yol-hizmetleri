@@ -15,18 +15,8 @@
 
         <!--<div>Quasar v{{ $q.version }}</div>-->
         <q-btn-group push>
-          <q-btn
-            push
-            label="Giriş Yap"
-            icon="account_circle"
-            color="light-blue-4"
-          />
-          <q-btn
-            push
-            label="Kayıt Ol"
-            icon="app_registration"
-            color="light-blue-10"
-          />
+          <q-btn push label="Giriş Yap" icon="account_circle" color="red-9" />
+          <q-btn push label="Kayıt Ol" icon="app_registration" color="red-5" />
         </q-btn-group>
       </q-toolbar>
     </q-header>

@@ -1,4 +1,5 @@
 <template>
+  lastikçi sayfa
   <leaflet-map></leaflet-map>
 </template>
 

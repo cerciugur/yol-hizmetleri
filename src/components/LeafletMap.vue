@@ -1,11 +1,11 @@
 <template>
+  aaaaaaaaaaaaa
   <div id="myMap" style="width: 100%; height: 500px"></div>
 </template>
 
-
 <script>
 import { defineComponent } from "vue";
-import "leaflet/dist/leaflet.css";
+import "leaflet/dist/lseaflet.css";
 import * as L from "leaflet";
 import { onMounted } from "vue";
 

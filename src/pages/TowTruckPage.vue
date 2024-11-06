@@ -1,11 +1,11 @@
 <template>
   çekici sayfa
-  <LeafletMap></LeafletMap>
+  <leaflet-map></leaflet-map>
 </template>
 
 <script>
 import { defineComponent } from "vue";
-import LeafletMap from "components/LeafletMap.vue";
+import LeafletMap from "src/components/LeafletMap.vue";
 
 export default defineComponent({
   name: "TowTruck",

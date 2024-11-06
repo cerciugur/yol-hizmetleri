@@ -1,28 +1,37 @@
 <template>
-  <div id="myMap" style="width: 100%; height: 500px"></div>
+  <div id="myMap" style="width: 100%; height: 890px"></div>
 </template>
 
 <script>
-import { defineComponent } from "vue";
-import "leaflet/dist/leaflet.css";
+import { onMounted, watch } from "vue";
 import L from "leaflet";
-import { onMounted } from "vue";
+import "leaflet/dist/leaflet.css";
 
-export default defineComponent({
-  name: "LeafletMap",
-  setup() {},
-});
+export default {
+  setup() {
+    onMounted(() => initMap());
 
-onMounted(() => {
-  initMap();
-});
+    function initMap() {
+      var map = new L.Map("myMap").setView([39.94, 32.802], 11);
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 20,
+        attribution:
+          '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      }).addTo(map);
 
-function initMap() {
-  var map = L.Map("myMap").setView([51.505, -0.09], 13);
-  L.tileLayer("https://tile.openstreetmap.org/{zoom}/{x}/{y}.png", {
-    maxZoom: 19,
-    attribution:
-      '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-  }).addTo(map);
-}
+      map.locate({ setView: true, maxZoom: 40, watch: true, timeout: 6000 });
+
+      function getCurrentLocation(e) {
+        var radius = e.accuracy / 2;
+        L.marker(e.latlng)
+          .addTo(map)
+          .bindPopup("You are within " + radius + " meters").openPopup;
+
+        L.circle(e.latlng, radius).addTo(map);
+      }
+
+      map.on("locationFound", getCurrentLocation);
+    }
+  },
+};
 </script>

@@ -1,14 +1,14 @@
 <template>
-  lastikçi sayfa
-  <leaflet-map></leaflet-map>
+  Lastikçi sayfa
+  <LeafletMap></LeafletMap>
 </template>
 
 <script>
-import LeafletMap from "src/components/LeafletMap.vue";
 import { defineComponent } from "vue";
+import LeafletMap from "components/LeafletMap.vue";
 
 export default defineComponent({
-  name: "TirePage",
+  name: "TowTruck",
 
   components: {
     LeafletMap,

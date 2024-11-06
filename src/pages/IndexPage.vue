@@ -10,7 +10,8 @@
       <q-btn
         push
         label="Çekici"
-        icon="fa-solid fa-truck-pickup"
+        icon="fa-solid fa-truck-p
+    NewMapickup"
         color="red-5"
       />
       <q-btn push label="Akü" icon="battery_charging_full" color="green-5" />
@@ -41,14 +42,6 @@ import { onMounted } from "vue";
 
 export default defineComponent({
   name: "PageIndex",
+  components: {},
 });
-
-onMounted(() => {
-  //locationYou()
-  redirectTowTruck();
-});
-
-function redirectTowTruck() {
-  window.location = "/towtruck";
-}
 </script>

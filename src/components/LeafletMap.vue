@@ -5,7 +5,7 @@
 
 <script>
 import { defineComponent } from "vue";
-import "leaflet/dist/lseaflet.css";
+import "leaflet/dist/leaflet.css";
 import * as L from "leaflet";
 import { onMounted } from "vue";
 
